@@ -1,6 +1,8 @@
+altair<5
 streamlit
+python-dotenv
 pandas
 scikit-learn
 nltk
 boto3
-python-dotenv
+
