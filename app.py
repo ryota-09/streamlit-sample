@@ -159,17 +159,21 @@ def getRecommendList(text):
 def onClick(input_text):
   target_movie_list = getRecommendList(input_text)
   if target_movie_list is None:  # target_movie_listがNoneの場合にエラーメッセージを表示
-    st.write("該当する映画が見つかりませんでした。")
+    st.write("該当する映画が見つかりませんでした🙅‍♂️")
   else:
     for movie in target_movie_list:
-      st.write(f'🎥 映画名: {movie.title}')
+      st.markdown(f'### 🎥 映画名: {movie.title}')
       st.write(f'🏷️ tags:\n {movie.tags}')
       st.write('=====================')
 
+st.markdown("# 🎬 映画のレコメンドアプリ")
+
+st.markdown("コサイン類似度で算出しています。")
+st.markdown("例 : Avatar , Aliens, Home, Titanic, The Godfather, Batman")
 
 # テキストボックスの作成
-input_text = st.text_input('テキストを入力してください')
+input_text = st.text_input('お好きな映画のタイトルを入力してください。(※ アルファベットのみ)')
 
 # ボタンの作成
-if st.button('送信'):
+if st.button('おすすめを探す'):
   onClick(input_text)
