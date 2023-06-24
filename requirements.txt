@@ -1,7 +1,7 @@
 alabaster==0.7.12
 altair==4.2.2
 anaconda-client 
-anaconda-navigator==2.1.4
+anaconda-navigator
 anaconda-project
 anyio
 appdirs==1.4.4
