@@ -49,8 +49,10 @@ def get_movies_csv_file():
     return  df
 
 def getRecommendList(text):
-  credits_df = pd.read_csv("./data/credits.csv")
-  movies_df = pd.read_csv("./data/movies.csv")
+  credits_df = get_credits_csv_file()
+  movies_df = get_movies_csv_file()
+  # credits_df = pd.read_csv("./data/credits.csv")
+  # movies_df = pd.read_csv("./data/movies.csv")
   
   pd.set_option("display.max_columns", None)
   pd.set_option("display.max_rows", None)
@@ -161,7 +163,7 @@ def onClick(input_text):
   else:
     for movie in target_movie_list:
       st.write(f'🎥 映画名: {movie.title}')
-      st.write(f'🏷️ tags: {movie.tags}')
+      st.write(f'🏷️ tags:\n {movie.tags}')
       st.write('=====================')
 
 
