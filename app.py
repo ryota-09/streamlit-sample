@@ -157,7 +157,8 @@ def getRecommendList(text):
   return recommend(text)
 
 def onClick(input_text):
-  target_movie_list = getRecommendList(input_text)
+  with st.spinner("📝 ただいま計算しています..."):
+    target_movie_list = getRecommendList(input_text)
   if target_movie_list is None:  # target_movie_listがNoneの場合にエラーメッセージを表示
     st.write("該当する映画が見つかりませんでした🙅‍♂️")
   else:
